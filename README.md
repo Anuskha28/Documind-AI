@@ -1,27 +1,73 @@
-# DocuMind AI — RAG Document Assistant
+# DocuMind AI
 
-Full-stack RAG MVP using React, FastAPI, PDF extraction, Sentence Transformers, FAISS and Gemini.
+Enterprise RAG-based Document Question Answering System
 
-## Backend
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-copy .env.example .env
-# Put your Gemini API key in .env
-uvicorn app.main:app --reload
-```
+## Features
+- PDF document ingestion
+- Intelligent text chunking
+- Sentence Transformer embeddings
+- FAISS vector search
+- Semantic retrieval
+- Gemini-powered answer generation
+- Source/page references
+- Hallucination reduction through grounded generation
 
-Backend: http://localhost:8000
+## Architecture
 
-## Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
+PDF
+ ↓
+Text Extraction
+ ↓
+Chunking
+ ↓
+Embeddings
+ ↓
+FAISS Vector Store
+ ↓
+User Query
+ ↓
+Query Embedding
+ ↓
+Similarity Search
+ ↓
+Top-K Context
+ ↓
+Gemini LLM
+ ↓
+Grounded Answer + Sources
 
-Frontend: http://localhost:5173
+## Tech Stack
 
-This is an interview/portfolio MVP. Production improvements should include authentication, document-level access control, persistent storage, background ingestion, rate limiting, evaluation, monitoring and stronger security.
+Frontend:
+React + Vite
+
+Backend:
+Python + FastAPI
+
+AI:
+Gemini
+Sentence Transformers
+RAG
+
+Vector Database:
+FAISS
+
+## How to Run
+
+Backend:
+...
+ 
+Frontend:
+...
+
+## Project Structure
+...
+
+## Future Improvements
+- Multi-document retrieval
+- Reranking
+- Hybrid search
+- RAG evaluation
+- Agentic routing
+- Authentication
+- Deployment
